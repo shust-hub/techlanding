@@ -486,22 +486,28 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: var(--background-color);
+  background-color: var(--accent-color);
   font-size: 14px;
   position: relative;
+  padding: 2rem  0;
 }
 
+.footer__image {
+  background-image: url("https://kadis.org/images/home-page/silhouette.svg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 180px;
+  margin-bottom: -3px;
+  background-color: #dbd5ea;
+}
 
 .footer .footer-about .logo {
   line-height: 1;
 }
 
-.footer .footer-top {
-  border-top: 1px solid #c5bfcd;
-  padding: 1rem 0;
-  
-}
 
 .footer .footer-about .logo img {
   max-height:60px;
@@ -509,7 +515,7 @@ h6 {
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
+  color: var(--background-color);
   font-family: var(--heading-font);
   font-size: 26px;
   font-weight: 700;
@@ -528,9 +534,9 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--accent-color);
+  background-color: var(--background-color);
   font-size: 18px;
-  color: var(--background-color);
+  color: var(--accent-color);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -545,11 +551,13 @@ h6 {
   margin-bottom: 0;
   font-size: 16px;
   font-weight: 600;
+  color: var(--background-color);
 }
 
 .footer .footer-links a i{
   font-size: 16px;
   font-weight: 600;
+  color: var(--background-color);
 }
 
 .footer .footer-contact p {
@@ -765,7 +773,7 @@ section,
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
-  padding: 0.75rem 2.5rem;
+  padding: 1.03rem 2.5rem;
   border-radius: 50px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -781,6 +789,12 @@ section,
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  display: inline-block;
+    padding: 12px 40px;
+    border-radius: 50px;
+    border: 2px solid color-mix(in srgb, var(--heading-color), transparent 30%);
+    font-size: 14px;
+    line-height: 1.1;
 }
 
 .hero .btn-link:hover {
@@ -1259,18 +1273,13 @@ section,
 
 @media (max-width: 991.98px) {
   .features-2 .feature-item {
-    text-align: center !important;
+    text-align: left!important;
     margin-bottom: 2rem;
   }
 
   .features-2 .feature-item .d-flex {
-    flex-direction: column;
-    text-align: center;
+    text-align: left;
     justify-content: center !important;
-  }
-
-  .features-2 .phone-mockup {
-    margin: 3rem 0;
   }
 }
 
@@ -1509,6 +1518,7 @@ section,
   margin: 15px 0 15px 0;
   padding: 0;
   font-size: 16px;
+  min-height: 145px;
 }
 
 .testimonials p {    
@@ -1517,6 +1527,13 @@ section,
   margin-bottom: 15px;
 }
 
+.testimonials .p1 {
+  min-height: 84px;
+}
+
+.testimonials .p2 {
+  min-height: 126px;
+}
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -1597,17 +1614,17 @@ section,
 }
 
 .services .service-card h3 {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   margin-bottom: 15px;
+  max-width: 600px;
 }
 
 .services .service-card p {
   margin-bottom: 0;
   color: color-mix(in srgb, var(--default-color), transparent 25%);
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
-  padding-right: 50px;
 }
 
 .services .service-card .read-more {
@@ -1617,6 +1634,7 @@ section,
   color: var(--accent-color);
   font-weight: 500;
   transition: all 0.3s ease;
+  margin-top: 0;
 }
 
 .services .service-card .read-more i {
@@ -1626,6 +1644,23 @@ section,
 
 .services .service-card .read-more:hover i {
   transform: translateX(5px);
+}
+
+@media (max-width: 767.98px) {
+  .services .service-card .icon {
+    display: none;
+  }  
+
+  .services .service-card h3 {
+    font-size: 24px;
+  }
+
+  .services .service-card .read-more {
+    margin-top: 15px;
+
+
+  }
+
 }
 
 /*--------------------------------------------------------------
